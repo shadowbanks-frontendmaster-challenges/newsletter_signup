@@ -25,41 +25,46 @@
   <body>
     <main>
       <!-- Sign-up form start -->
-      <section class="signup">
+      <section class="signup hide">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="cover image">
-        <h1 class="signup-caption">Stay updated!</h1>
-        <p class="signup intro">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul class="signup-list">
-          <li class="signup-list-item">
-            Product discovery and building what matters
-          </li>
-          <li class="signup-list-item">
-            Measuring to ensure updates are a success
-          </li>
-          <li class="signup-list-item">And much more!</li>
-        </ul>
-        <form action="_blank" class="signup-form">
-          <fieldset>
-            <legend>Email address</legend>
-            <span></span>
-            <input type="email" placeholder="email@company.com" />
-          </fieldset>
-          <button class="form-submit-btn">
-            Subscribe to monthly newsletter
-          </button>
+        <div class="signup-container">
+          <h1 class="signup-caption">Stay updated!</h1>
+          <p class="signup-intro">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="signup-list">
+            <li class="signup-list-item">
+              Product discovery and building what matters
+            </li>
+            <li class="signup-list-item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="signup-list-item">And much more!</li>
+          </ul>
+          <form action="_blank" class="signup-form">
+            <fieldset>
+              <label for="email">Email address</label>
+              <span class="signup-email-err">placeholder</span>
+              <input id="email" type="email" placeholder="email@company.com" />
+            </fieldset>
+            <button class="form-submit-btn">
+              Subscribe to monthly newsletter
+            </button>
+        </div>
         </form>
         <!-- Sign-up form end -->
       </section>
       <section class="signup-success hide">
         <!-- Success message start -->
-        <h2 class="signup-sucsess-heading">Thanks for subscribing!</h2>
-        <p class="signup-success-body">
-          A confirmation email has been sent to
-          <strong>ash@loremcompany.com</strong>. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
+         <div class="signup-success-main">
+           <img src="./assets/images/icon-list.svg" alt="">
+                   <h2 class="signup-success-caption">Thanks for subscribing!</h2>
+                   <p class="signup-success-body">
+            A confirmation email has been sent to
+            <strong>ash@loremcompany.com</strong>. Please open it and click the
+            button inside to confirm your subscription.
+                   </p>
+         </div>
         <button class="signup-success-dismiss-btn">Dismiss message</button>
         <!-- Success message end -->
       </section>

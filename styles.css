@@ -20,10 +20,129 @@ ul {
 
 html {
   font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .hide {
   display: none;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.signup img {
+  object-fit: cover;
+}
+
+.signup-container {
+  padding: 1rem 1rem;
+}
+.signup-container .signup-caption {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.signup-container .signup-intro {
+  margin-bottom: 2rem;
+}
+.signup-container ul li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 1rem;
+}
+.signup-container ul li::before {
+  content: url("./assets/images/icon-list.svg");
+  position: absolute;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+}
+.signup-container form {
+  margin-top: 3rem;
+  position: relative;
+}
+.signup-container form label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.signup-container form input {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 0.05rem solid hsl(231, 7%, 60%);
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+}
+.signup-container form input:focus {
+  border: 0.05rem solid hsl(235, 18%, 26%);
+}
+.signup-container form .signup-email-err {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.signup-container form .show {
+  display: block;
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+}
+
+button:active {
+  cursor: pointer;
+  background-color: hsl(4, 100%, 67%);
+}
+
+.signup.hide {
+  display: none;
+}
+
+.signup-success {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.signup-success .signup-success-main {
+  margin-top: 8rem;
+}
+.signup-success .signup-success-main img {
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+.signup-success .signup-success-main .signup-success-caption {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+.signup-success .signup-success-dismiss-btn {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

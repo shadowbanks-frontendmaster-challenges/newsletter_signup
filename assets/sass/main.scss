@@ -20,14 +20,7 @@ html {
   font-family: $font-fam;
 }
 
-.hide {
-  display: none;
-}
-
 body {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   min-height: 100vh;
   font-weight: $weight-1;
   line-height: 1.5;
@@ -40,6 +33,7 @@ body {
 
   img {
     object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -89,15 +83,21 @@ body {
     input:focus {
       border: 0.05rem solid $Charcoal-Grey;
     }
-
+    input.error {
+      border-color: $primary-color;
+      background-color: hsl(4, 100%, 67%, 0.1);
+      color: $primary-color;
+    }
+    input:focus:invalid {
+      outline: none;
+    }
     .signup-email-err {
       position: absolute;
       right: 0;
       top: 0;
-      display: none;
-    }
-    .show {
-      display: block;
+      color: $primary-color;
+      font-weight: $weight-2;
+      font-size: 0.8rem;
     }
   }
 }
@@ -116,9 +116,15 @@ button {
   color: $White;
   background-color: $Dark-Slate-Grey;
 }
-button:active {
+
+button:hover,
+input:hover {
   cursor: pointer;
+}
+button:hover,
+button:active {
   background-color: $primary-color;
+  box-shadow: 0.5rem 1rem 2rem $primary-color;
 }
 
 .signup.hide {
@@ -150,5 +156,63 @@ button:active {
     // background-color: $;
     margin-top: auto;
     margin-bottom: 1.5rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@include mq.respond(desktop) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Charcoal-Grey;
+    min-height: 100vh;
+  }
+  .signup {
+    flex-direction: row;
+    padding: 1.5rem;
+    background-color: $White;
+    min-height: auto;
+    border-radius: 2rem;
+
+    picture {
+      order: 2;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .signup-container {
+      order: 1;
+      margin: 2rem 1rem;
+
+      .signup-caption {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  .signup-success {
+    background-color: $White;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    .signup-success-main {
+      margin: 0;
+      .signup-success-caption {
+        font-size: 3rem;
+        font-weight: $weight-2;
+        margin-bottom: 1.5rem;
+      }
+      .signup-success-body{
+        margin-bottom: 1.5rem;
+      }
+    }
+    .signup-success-dismiss-btn {
+      margin-bottom: auto;
+    }
   }
 }

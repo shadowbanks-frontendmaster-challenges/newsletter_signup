@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -25,8 +26,12 @@
   <body>
     <main>
       <!-- Sign-up form start -->
-      <section class="signup hide">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="cover image">
+      <section class="signup">
+        <picture>
+          <source media="(max-width: 48rem)" srcset="./assets/images/illustration-sign-up-mobile.svg" />
+          <source media="(min-width: 48.01rem)" srcset="./assets/images/illustration-sign-up-desktop.svg" />
+          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="cover image">
+        </picture>
         <div class="signup-container">
           <h1 class="signup-caption">Stay updated!</h1>
           <p class="signup-intro">
@@ -41,11 +46,11 @@
             </li>
             <li class="signup-list-item">And much more!</li>
           </ul>
-          <form action="_blank" class="signup-form">
+          <form novalidate class="signup-form" >
             <fieldset>
               <label for="email">Email address</label>
-              <span class="signup-email-err">placeholder</span>
-              <input id="email" type="email" placeholder="email@company.com" />
+              <span class="signup-email-err" aria-live="polite"></span>
+              <input id="email" type="email" placeholder="email@company.com" required />
             </fieldset>
             <button class="form-submit-btn">
               Subscribe to monthly newsletter

@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
 }
 .signup img {
+  display: block;
   object-fit: cover;
   width: 100%;
 }
@@ -45,7 +46,7 @@ body {
 .signup-container .signup-caption {
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .signup-container .signup-intro {
   margin-bottom: 2rem;
@@ -53,7 +54,7 @@ body {
 .signup-container ul li {
   position: relative;
   padding-left: 2.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .signup-container ul li::before {
   content: url("./assets/images/icon-list.svg");
@@ -63,7 +64,7 @@ body {
   height: 1rem;
 }
 .signup-container form {
-  margin-top: 3rem;
+  margin-top: 2rem;
   position: relative;
 }
 .signup-container form label {
@@ -79,6 +80,7 @@ body {
   border: 0.05rem solid hsl(231, 7%, 60%);
   margin-top: 0.7rem;
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 .signup-container form input:focus {
   border: 0.05rem solid hsl(235, 18%, 26%);
@@ -101,7 +103,7 @@ body {
 }
 
 button {
-  margin-top: 1.5rem;
+  margin-top: auto;
   width: 100%;
   height: 4rem;
   font-size: 1.1rem;
@@ -159,6 +161,14 @@ button:active {
   display: none;
 }
 
+@media (min-width: 30rem) {
+  .signup img {
+    height: 20rem;
+  }
+  .signup .signup-container {
+    flex-grow: 1;
+  }
+}
 @media (min-width: 48rem) {
   main {
     display: flex;
